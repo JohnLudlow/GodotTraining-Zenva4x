@@ -1,0 +1,109 @@
+[gd_scene load_steps=16 format=3 uid="uid://b6il8e08ml62p"]
+
+[ext_resource type="Script" path="res://Game/HexTileMap.cs" id="1_p2mn0"]
+[ext_resource type="Script" path="res://Game/Game.cs" id="1_u6bog"]
+[ext_resource type="Texture2D" uid="uid://c835c0w8m3rp7" path="res://Assets/Textures/hex_128.png" id="2_7oc31"]
+[ext_resource type="Texture2D" uid="uid://02xg51llnjr6" path="res://Assets/Textures/hex_overlays.png" id="3_4eipu"]
+[ext_resource type="Script" path="res://Game/Camera.cs" id="4_1b6e4"]
+[ext_resource type="PackedScene" uid="uid://cnlqs17a4jgsh" path="res://Game/UIManager.tscn" id="6_mqm4a"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fk1rl"]
+noise_type = 0
+fractal_octaves = 9
+fractal_ping_pong_strength = 3.0
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkiv2"]
+texture = ExtResource("2_7oc31")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bxxom"]
+tile_shape = 3
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_pkiv2")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wekak"]
+texture = ExtResource("2_7oc31")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hd3s7"]
+tile_shape = 3
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_wekak")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrs7a"]
+texture = ExtResource("3_4eipu")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qno7u"]
+tile_shape = 3
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_wrs7a")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dci1q"]
+texture = ExtResource("3_4eipu")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2435h"]
+tile_shape = 3
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_dci1q")
+
+[node name="Game" type="Node"]
+script = ExtResource("1_u6bog")
+Noise = SubResource("FastNoiseLite_fk1rl")
+
+[node name="HexTileMap" type="Node2D" parent="."]
+script = ExtResource("1_p2mn0")
+
+[node name="BaseLayer" type="TileMapLayer" parent="HexTileMap"]
+tile_set = SubResource("TileSet_bxxom")
+metadata/_edit_lock_ = true
+
+[node name="CivColorsLayer" type="TileMapLayer" parent="HexTileMap"]
+modulate = Color(1, 1, 1, 0.392157)
+tile_set = SubResource("TileSet_hd3s7")
+
+[node name="HexBordersLayer" type="TileMapLayer" parent="HexTileMap"]
+modulate = Color(1, 1, 1, 0.0980392)
+tile_set = SubResource("TileSet_qno7u")
+metadata/_edit_lock_ = true
+
+[node name="SelectionOverlayLayer" type="TileMapLayer" parent="HexTileMap"]
+tile_set = SubResource("TileSet_2435h")
+metadata/_edit_lock_ = true
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(952, 596)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("4_1b6e4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UIManager" parent="CanvasLayer" instance=ExtResource("6_mqm4a")]
+
+[connection signal="ClickOffMap" from="HexTileMap" to="CanvasLayer/UIManager" method="HideAllPopups"]
+[connection signal="SendCityUIInfo" from="HexTileMap" to="CanvasLayer/UIManager" method="UpdateCityInfoUI"]

@@ -24,6 +24,10 @@ public partial class City : Node2D, INotifyEntityPropertyChanged<EntityUpdatedEv
   public int TotalFood => CityTerritory.Sum(t => t.Food);
   public int TotalProduction => CityTerritory.Sum(t => t.Production);
 
+  public List<Unit> UnitBuildQueue {get;} = [];
+  public Unit? UnitBeingBuilt => UnitBuildQueue.FirstOrDefault();
+  public int UnitProductionProgress {get;private set;}
+
   public Civilization OwnerCivilization
   {
     get => _ownerCivilization;
@@ -34,6 +38,12 @@ public partial class City : Node2D, INotifyEntityPropertyChanged<EntityUpdatedEv
       _sprite ??= GetNode<Sprite2D>("Sprite2D");
       _sprite.Modulate = _ownerCivilization.CivilizationTerritoryColor;
     }
+  }
+
+  public void AddUnitToBuildQueue(Unit unit)
+  {
+    UnitBuildQueue.Add(unit);
+    PropertyChanged?.Invoke(this, new EntityUpdatedEventArgs<City?>(this));
   }
 
   public string CityName
@@ -69,7 +79,7 @@ public partial class City : Node2D, INotifyEntityPropertyChanged<EntityUpdatedEv
   private Civilization _ownerCivilization;
   private string _cityName;
 
-  public event EventHandler<EntityUpdatedEventArgs<City>> PropertyChanged;
+  public event EventHandler<EntityUpdatedEventArgs<City?>> PropertyChanged;
 
   public void AddTerritory(IEnumerable<Hex> territoryToAdd)
   {

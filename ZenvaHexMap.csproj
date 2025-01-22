@@ -9,6 +9,7 @@
         <AnalysisLevel>5.0</AnalysisLevel>
         <AnalysisMode>Recommended</AnalysisMode>
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
       <PackageReference Include="Roslynator.Analyzers" Version="4.12.5">

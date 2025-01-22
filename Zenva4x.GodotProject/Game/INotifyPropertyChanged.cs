@@ -1,6 +1,6 @@
 using System;
 
-namespace ZenvaHexMap.Game;
+namespace Zenva4x.GodotProject.Game;
 
 public class EntityUpdatedEventArgs<TEntity>(TEntity city) : EventArgs
 {

@@ -2,7 +2,7 @@ using System;
 
 using Godot;
 
-namespace ZenvaHexMap.Game;
+namespace Zenva4x.GodotProject.Game;
 
 public partial class CityUI : Panel
 {

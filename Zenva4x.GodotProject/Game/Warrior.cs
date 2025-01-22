@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-namespace ZenvaHexMap.Game;
+namespace Zenva4x.GodotProject.Game;
 
 public partial class Warrior : Unit
 {

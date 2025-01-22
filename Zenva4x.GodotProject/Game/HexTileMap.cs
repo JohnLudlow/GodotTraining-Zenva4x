@@ -4,7 +4,7 @@ using System.Linq;
 
 using Godot;
 
-namespace ZenvaHexMap.Game;
+namespace Zenva4x.GodotProject.Game;
 
 public enum TerrainTypes
 {

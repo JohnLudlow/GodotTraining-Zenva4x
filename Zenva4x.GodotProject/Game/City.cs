@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ZenvaHexMap.Game;
+namespace Zenva4x.GodotProject.Game;
 
 public partial class City : Node2D, INotifyEntityPropertyChanged<EntityUpdatedEventArgs<City>>
 {

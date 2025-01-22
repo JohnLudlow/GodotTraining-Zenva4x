@@ -21,6 +21,7 @@ public partial class Civilization
   public Color CivilizationTerritoryColor { get; init; }
   public required int AltTileId { get; set; }
   public List<City> Cities { get; set; } = [];
+  public List<Unit> Units { get; set; } = [];
 
   public void ProcessTurn() {foreach (var city in Cities) { city.ProcessTurn(); } }
 }

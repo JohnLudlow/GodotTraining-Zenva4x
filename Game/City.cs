@@ -72,6 +72,8 @@ public partial class City : Node2D, INotifyEntityPropertyChanged<EntityUpdatedEv
 
       PropertyChanged?.Invoke(this, new EntityUpdatedEventArgs<City>(this));
     }
+
+    ProcessUnitBuildQueue();
   }
 
   private Sprite2D _sprite;
@@ -99,6 +101,33 @@ public partial class City : Node2D, INotifyEntityPropertyChanged<EntityUpdatedEv
 
       AddTerritory([BorderTilePool[index]]);
       BorderTilePool.RemoveAt(index);
+    }
+  }
+
+  public void SpawnUnit(Unit unit)
+  {
+    var unitNode = (Unit)Unit.UnitScneResoures[unit.GetType()].Instantiate();
+    unitNode.Position = Map.MapToLocal(CityCentreCoordinates);
+    unitNode.UnitCoordinates = CityCentreCoordinates;
+    unitNode.OwnerCivilization = OwnerCivilization;
+
+    Map.AddChild(unitNode);
+  }
+
+  public void ProcessUnitBuildQueue()
+  {
+    if (UnitBuildQueue.Count > 0 && UnitBeingBuilt is not null)
+    {
+      UnitProductionProgress += TotalProduction;
+
+      if (UnitProductionProgress > UnitBeingBuilt.ProductionRequired)
+      {
+        SpawnUnit(UnitBeingBuilt);
+        UnitBuildQueue.RemoveAt(0);
+        UnitProductionProgress = 0;
+      }
+
+      PropertyChanged?.Invoke(this, new EntityUpdatedEventArgs<City>(this));
     }
   }
 

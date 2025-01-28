@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c835c0w8m3rp7"
-path="res://.godot/imported/hex_128.png-22301d456066175841c70c3c3cc8fa55.ctex"
+path="res://.godot/imported/hex_128.png-6ded2e87a56d609e8b38e25d54363b78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/hex_128.png"
-dest_files=["res://.godot/imported/hex_128.png-22301d456066175841c70c3c3cc8fa55.ctex"]
+source_file="res://Zenva4x.GodotProject/Assets/Textures/hex_128.png"
+dest_files=["res://.godot/imported/hex_128.png-6ded2e87a56d609e8b38e25d54363b78.ctex"]
 
 [params]
 

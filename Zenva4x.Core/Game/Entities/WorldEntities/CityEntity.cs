@@ -1,4 +1,4 @@
-namespace Zenva4x.GodotProject.Game.Entities.WorldEntities;
+namespace Zenva4x.Core.Game.Entities.WorldEntities;
 
 public class CityEntity : GameEntity
 {

@@ -1,8 +1,10 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenva4x.GodotProject", "Zenva4x.GodotProject.csproj", "{DC40166E-5941-4ADF-9A29-94CD52EDEB34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenva4x.GodotProject", "Zenva4x.GodotProject\Zenva4x.GodotProject.csproj", "{DC40166E-5941-4ADF-9A29-94CD52EDEB34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenva4x.UnitTests", "..\Zenva4x.UnitTests\Zenva4x.UnitTests.csproj", "{D323F704-1160-449D-96F5-918E9DA299E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenva4x.UnitTests", "Zenva4x.UnitTests\Zenva4x.UnitTests.csproj", "{D323F704-1160-449D-96F5-918E9DA299E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenva4x.Core", "Zenva4x.Core\Zenva4x.Core.csproj", "{D4B728C2-A6E4-4FF2-896C-B38AA5EC7013}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +25,11 @@ Global
 		{D323F704-1160-449D-96F5-918E9DA299E3}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
 		{D323F704-1160-449D-96F5-918E9DA299E3}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
 		{D323F704-1160-449D-96F5-918E9DA299E3}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+		{D4B728C2-A6E4-4FF2-896C-B38AA5EC7013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B728C2-A6E4-4FF2-896C-B38AA5EC7013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B728C2-A6E4-4FF2-896C-B38AA5EC7013}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B728C2-A6E4-4FF2-896C-B38AA5EC7013}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B728C2-A6E4-4FF2-896C-B38AA5EC7013}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B728C2-A6E4-4FF2-896C-B38AA5EC7013}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

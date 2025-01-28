@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx0nhn5enefe3"
-path="res://.godot/imported/beach.jpg-255786a9a845da25ed30bc5806d50b65.ctex"
+path="res://.godot/imported/beach.jpg-74ec7277133c09f5a5f8eb22e3533995.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/beach.jpg"
-dest_files=["res://.godot/imported/beach.jpg-255786a9a845da25ed30bc5806d50b65.ctex"]
+source_file="res://Zenva4x.GodotProject/Assets/UI/beach.jpg"
+dest_files=["res://.godot/imported/beach.jpg-74ec7277133c09f5a5f8eb22e3533995.ctex"]
 
 [params]
 

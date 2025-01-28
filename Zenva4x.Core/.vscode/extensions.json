@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "alfish.godot-files",
+        "woberg.godot-dotnet-tools",
+        "altamkp.godot-docs-vscode-csharp",
+        "altamkp.godot-snippets-vscode-csharp",
+        "geequlim.godot-tools",
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.vscodeintellicode-csharp",
+        "ms-dotnettools.vscode-dotnet-runtime"
+    ]
+}

@@ -20,12 +20,9 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: Zenva4x.GodotProject
 
     - name: Build
       run: dotnet build --no-restore
-      working-directory: Zenva4x.GodotProject      
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      working-directory: Zenva4x.GodotProject      

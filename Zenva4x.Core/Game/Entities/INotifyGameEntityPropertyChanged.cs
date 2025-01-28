@@ -1,6 +1,6 @@
 using System;
 
-namespace Zenva4x.GodotProject.Game.Entities;
+namespace Zenva4x.Core.Game.Entities;
 
 public interface INotifyGameEntityPropertyChanged
 {

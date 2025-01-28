@@ -1,4 +1,4 @@
-using Zenva4x.GodotProject.Game.Entities.WorldEntities;
+using Zenva4x.Core.Game.Entities.WorldEntities;
 
 namespace Zenva4x.UnitTests.Game.Entities.WorldEntities;
 

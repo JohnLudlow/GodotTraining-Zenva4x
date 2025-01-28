@@ -1,6 +1,4 @@
-using Zenva4x.GodotProject.Game.Entities;
-
-namespace Zenva4x.GodotProject.Game.Entities.WorldEntities;
+namespace Zenva4x.Core.Game.Entities.WorldEntities;
 
 public class CivilizationEntity : GameEntity
 {

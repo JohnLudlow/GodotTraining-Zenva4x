@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dc3hos526bsu3"
-path="res://.godot/imported/plains.jpg-986f4d5c15e028a8712a6792f86b2c82.ctex"
+path="res://.godot/imported/plains.jpg-5408bc0f4061c86a2baec9c497568927.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/plains.jpg"
-dest_files=["res://.godot/imported/plains.jpg-986f4d5c15e028a8712a6792f86b2c82.ctex"]
+source_file="res://Zenva4x.GodotProject/Assets/UI/plains.jpg"
+dest_files=["res://.godot/imported/plains.jpg-5408bc0f4061c86a2baec9c497568927.ctex"]
 
 [params]
 

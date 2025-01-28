@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4x8t381c0hcl"
-path="res://.godot/imported/warrior.png-200290135ac24d4d79e1ef4e26cee468.ctex"
+path="res://.godot/imported/warrior.png-47e98354cc1541a4815f164f7470cde4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/warrior.png"
-dest_files=["res://.godot/imported/warrior.png-200290135ac24d4d79e1ef4e26cee468.ctex"]
+source_file="res://Zenva4x.GodotProject/Assets/UI/warrior.png"
+dest_files=["res://.godot/imported/warrior.png-47e98354cc1541a4815f164f7470cde4.ctex"]
 
 [params]
 

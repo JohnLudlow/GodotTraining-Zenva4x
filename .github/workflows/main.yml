@@ -41,3 +41,8 @@ jobs:
         indicators: true
         output: both
         thresholds: '60 80'
+
+    - uses: 5monkeys/cobertura-action@master
+      with:
+        path: '**/coverage.cobertura.xml'
+        minimum_coverage: 60

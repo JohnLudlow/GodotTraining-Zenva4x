@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Run in Player": {
+      "commandName": "Executable",
+      "executablePath": "%GODOT43%",
+      "workingDirectory": "."
+    }
+  }
+}

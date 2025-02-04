@@ -256,3 +256,4 @@ dotnet_naming_style._underscorecamelcase.required_prefix = _
 dotnet_naming_style._underscorecamelcase.required_suffix = 
 dotnet_naming_style._underscorecamelcase.word_separator = 
 dotnet_naming_style._underscorecamelcase.capitalization = camel_case
+

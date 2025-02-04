@@ -12,8 +12,8 @@ config_version=5
 
 config/name="ZenvaHexMap"
 config/tags=PackedStringArray("c#", "zenva")
-run/main_scene="res://Game/Game.tscn"
-config/features=PackedStringArray("4.3", "C#", "Forward Plus")
+run/main_scene="res://Zenva4x.GodotProject/Main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]

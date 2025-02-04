@@ -13,8 +13,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)/.godot/mono/temp/obj</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'==''">$(MSBuildThisFileDirectory)/.godot/mono/temp/obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath Condition="'$(IntermediateOutputPath)'==''">$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

@@ -6,7 +6,7 @@ name: Build and Test
 on: [push]
 
 permissions:
-  pull-requests: write
+  pull-requests: write  
 
 jobs:
   build:
@@ -41,8 +41,3 @@ jobs:
         indicators: true
         output: both
         thresholds: '60 80'
-
-    - uses: 5monkeys/cobertura-action@master
-      with:
-        path: '**/coverage.cobertura.xml'
-        minimum_coverage: 60

@@ -65,6 +65,7 @@ internal class FastNoiseLiteWrapper : IFastNoiseLite, IDisposable
   /// <inheritdoc/>
   public float FractalLacunarity { get; set; }
 
+  /// <inheritdoc/>
   public float GetNoise2D(float x, float y) => _noise.GetNoise2D(x, y);
 
   protected virtual void Dispose(bool disposing)

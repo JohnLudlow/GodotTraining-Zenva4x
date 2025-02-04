@@ -5,9 +5,11 @@ name: Build and Test
 
 on: [push]
 
+permissions:
+  pull-requests: write
+
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -46,5 +48,5 @@ jobs:
     - name: Add Coverage PR Comment
       uses: marocchino/sticky-pull-request-comment@v2
       with:
-        recreate: true
-        path: code-coverage-results.md
+        recreate: true        
+        path: ./code-coverage-results.md
